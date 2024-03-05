@@ -37,11 +37,19 @@ public class ImageGenerator {
         for (int i = 0; i < 150; i++) {
             int randomXPosition = rand.nextInt(WIDTH);
             int randomYPosition = rand.nextInt(HEIGHT);
-            drawCircle(randomXPosition, randomYPosition, 1, WHITE, WHITE);
+            //drawCircle(randomXPosition, randomYPosition, 1, WHITE, WHITE);
+            drawRect(200,100,50,250,WHITE);
         }
     }
 
     private void drawRect(int left, int top, int width, int height, Color color) {
+        for(int row = top; row<top+height; row++){
+            for(int col = left; col<left+width; col++){
+                if(row>=0 && row<HEIGHT && col>+0 && col<WIDTH){
+                    image[row][col]=color;
+                }
+            }
+        }
         
     }
 
